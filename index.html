@@ -4,8 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Link your CSS stylesheet -->
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
-    
+    <section class="title-sec">
+        <div class="title-icons">
+            <img src="https://e1.pngegg.com/pngimages/720/726/png-clipart-emoji-sticker-x-icon-thumbnail.png"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQae8IcVDwJEK24Vx5OLEVZNhTPx5ycfnfZpg&usqp=CAU"/>
+            <img src="data:image/png;base64,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"/>
+        </div>
+        <div class="title-div">
+            <p>My Portfolio</p>
+        </div>
+    </section>
+    <!-- end of title section -->
+    <section class="nav-sec">
+        <h1>Sridevi Chandrupatla</h1>
+        <!-- <nav class="title-icons"> -->
+         <nav class="nav-links">
+            <a class="nav1" href="index.html" >Home</a>
+            <a class="nav2" href="about.html" >About</a>
+            <a class="nav3" href="projects.html">Projects</a>
+            <a class="nav4" href="contact.html">Contact</a>
+        </nav>     
+    </section>
+    <!-- end of nav section -->
+    <section class="head-sec">
+        <div class="myimage-div">
+            <img src="https://picsum.photos/id/1043/367/267"/>    
+        </div> 
+        <div class="mydetails-div">
+            <h2>Sridevi Chandrupatla</h2>
+            <button class="myProjects" href="#">"My Projects"</button>
+            <div classs="aboutme">
+                <p> Hello , I'm Sridevi</br><br>
+                    I am based in the Bay Area . I am here learn coding and take up a career <br>
+                    as a software engineer. You can learn more about me going into my projects<br> or fun facts. Watch out... more stuff is the way!
+                </p>
+            </div>
+        </div>     
+    </section>
+    <!-- end of head section -->
+    <section class="projects-sec">
+        <div class="project1-div">
+                <img src="https://picsum.photos/id/1039/367/267"/>
+                <p>project-1</p>
+        </div> 
+        <div class="project2-div">
+            <img src="https://picsum.photos/id/1039/367/267"/>
+            <p>project-2</p>
+        </div> 
+        <div class="project3-div">
+            <img src="https://picsum.photos/id/1039/367/267"/>
+            <p>project-3</p>
+        </div> 
+        <div class="project4-div">
+            <img src="https://picsum.photos/id/1039/367/267"/>
+            <p>project-4</p>
+        </div>    
+    </section>
+    <!-- end of projects section -->
+    <section class="funfacts-sec">
+        <div class="funfact1-div">
+                <img src="https://picsum.photos/id/1062/367/267"/>
+                <p>cool thing</p>
+        </div> 
+        <div class="funfact2-div">
+            <img src="https://picsum.photos/id/1062/367/267"/>
+            <p>fun thing</p>
+        </div> 
+        <div class="funfact3-div">
+            <img src="https://picsum.photos/id/1062/367/267"/>
+            <p>spicy thing</p>
+        </div> 
+        <div class="funfact4-div">
+            <img src="https://picsum.photos/id/1062/367/267"/>
+            <p>special thing</p>
+        </div>    
+    </section>
+    <!-- end of funfacts section -->
+    <footer>
+        <div class="footer-div">
+            <h2>Like what you see?</h2>
+            <button class="contact-me" href="#">"Contact Me"</button>
+         </div>
+        <div class="social-div">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-twitter"></i>
+        <div>
+    </footer>
 </body>
 </html>
