@@ -57,42 +57,44 @@ html{
   *{
     box-sizing: border-box;
     max-width:100%;
-    /* border:1px solid grey; */
+    border:1px solid grey;
+    
 }
 body{
-    /* background-color:BLUE; */
+    background-color:#FBFFFB;
     color:#4f4f4f;
 }
 p{
     text-align: center;
 }
-
+/* div{
+    border:1px dotted aqua;
+} */
 .title-sec{
     display:flex;
 }
 .title-icons{
+    width:40%;
     display:flex;
     justify-content: left;
     
 }
 .title-icons img{
     width:5%;
-    margin:1%;   
+    margin:.5%;  
+    height:20%; 
 } 
 .title-div {
     display:fex;
-    justify-content: center;
-    width:50%;
 }
 .title-div p{
-    Justify-content: center;
+    Justify-content: left;
     color:darkslategray;
     font-size: 10rem;
-    margin:2rem;
 }
 h1{
     font-size: 6rem;  
-    color:rgb(47, 182, 187);
+    color:rgb(10, 21, 173);
     font-style: bold;
     margin:1%;
     padding:1%;
@@ -101,6 +103,7 @@ h1{
     display:flex;
     justify-content: left;
     margin:2%;
+    
 }
 nav a{
     width:10rem;
@@ -110,30 +113,29 @@ nav a{
     font-size: 2rem;
     background-color:rgb(247, 245, 240);
     color:#4f4f4f;
+    text-align: center;
+    text-decoration: none;
+}
+
+.head-sec{
+    display:flex;
+    padding: 1%;
 }
 .myimage-div{
-    margin:2%;
-    padding: 1%;
-    width:40%;
+    width:100%;
 }
 .myimage-div img{
     width:80%;
-}
-.head-sec{
-    display:flex;
-    margin:2%;
-    padding: 1%;
 }
 .mydetails-div{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    margin:2%;
 }
 h2{
     font-size: 4rem;
     font-style: italic;
-    color:rgb(203, 132, 233);
+    color:#024217;
 }
 .mydetails-div button{
     font-size: 2rem;
@@ -153,20 +155,20 @@ h2{
 }
 .projects-sec{
     display:flex;
-    margin:2%;
-    padding: 1%;
-    justify-content:space-around;
+    flex-wrap: wrap;  
 }
-.funfacts-sec{
-    display:flex;
-    margin:2%;
+.projects-sec div{
+    justify-content:center;
+    flex-wrap: wrap;
+    margin:1%;
     padding: 1%;
-    justify-content:space-around;
 }
+
 footer{
     height:15%;
     margin:2%;
     padding:2%;
+    background-color: antiquewhite;
 }
 .footer-div{
     display: flex;
@@ -176,10 +178,10 @@ footer{
 }
 footer button{
     background-color:rgb(176, 206, 211);
-    width:10%;
+    width:15%;
     margin:1%;
     padding:0.5%;
-    height:6rem;
+    height:4rem;
     border:1px solid #4f4f4f;
     justify-content: center;
 }
@@ -190,10 +192,95 @@ footer button{
     height:30%;
 }
 .social-div i{
-    /* padding:1%; */
-    width:5%;
-    padding: 2%;
-    margin-left: 1%;
-    /* justify-content: center; */
-
+    margin-left: 1%; 
 }
+/* media queries */
+/* screen-800px media queries */
+@media(max-width:800px){  
+    .myimage-div img{
+        width:80%;
+    }
+
+    .mydetails-div button{
+        width:40%;
+        align-self:left;
+    }
+}
+/* screen-500px media queries */
+@media(max-width:500px){
+.title-sec{
+    display:none;
+}
+.nav-sec{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.nav-sec h1{
+    font-size: 3rem;
+    align-self: center;
+}
+.nav-links {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links a{
+    width:auto;
+}
+.head-sec{
+    display:flex;
+    flex-direction: column;
+}
+.myimage-div img{
+    width:100%;
+}
+.mydetails-div h2{
+   font-size: 3rem;
+   align-self: center;
+}
+.mydetails-div button{
+    width:40%;
+    align-self:center;
+}
+.mydetails-div p{
+    margin:2%;
+    font-size: 1.2rem;
+    align-self:center;
+}
+
+.projects-sec{
+    justify-content: center;
+    flex-wrap: wrap;     
+}
+.projects-sec div{
+    width:40%;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin:1%;
+    padding: 1%;
+    font-size: 1.4rem;;
+}
+footer{
+    height:10%;
+}
+footer h2{
+    font-size: 3rem;
+}
+footer button{
+    width:25%;
+    margin:1%;
+    padding:0.25%;
+    height:3rem;
+}
+.social-div{
+    display:flex;
+    justify-content:center;
+    width:100%;
+    height:30%;
+}
+.social-div i{
+      width:auto; 
+}
+}/* end of media query */
